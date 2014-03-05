@@ -39,6 +39,12 @@ describe QuebraEssa::Hash do
     QuebraEssa::Hash.reach(hash, :a).should eql({b: 'pimba'})
   end
 
-  
-
+  context "binding method on self" do
+    it "should work on self" do
+      hash = {}
+      hash[:a] = 'pimba'
+      QuebraEssa::Hash.bind(hash, :reach) 
+      hash.reach(:a).should eql('pimba')
+    end 
+  end
 end
