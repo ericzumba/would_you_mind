@@ -40,11 +40,40 @@ describe QuebraEssa::Hash do
   end
 
   context "binding method on self" do
-    it "should work on self" do
-      hash = {}
-      hash[:a] = 'pimba'
-      QuebraEssa::Hash.bind(hash, :reach) 
-      hash.reach(:a).should eql('pimba')
+    
+    before :each do
+      @hash = {}
+      QuebraEssa::Hash.bind(@hash, :reach)
+    end
+
+    it "should work" do
+      @hash[:a] = 'pimba'
+      @hash.reach(:a).should eql('pimba')
     end 
+
+    it "should work again" do
+      @hash[:a] = {}
+      @hash[:a][:b] = 'pimba'
+      @hash.reach(:a, :b).should eql('pimba')
+    end
+
+    it "should reach the last avaiable key" do
+      @hash[:a] = {}
+      @hash[:a][:b] = 'pimba'
+      @hash.reach(:a, :b, :c).should eql('pimba')
+    end
+
+    it "should reach the last avaiable key even if its nil" do
+      @hash[:a] = {}
+      @hash[:a][:b] = nil
+      @hash.reach(:a, :b, :c).should eql(nil)
+    end
+
+    it "should work yet one more time" do
+      @hash[:a] = {}
+      @hash[:a][:b] = 'pimba' 
+      @hash.reach(:a).should eql({b: 'pimba'})
+    end
+
   end
 end
