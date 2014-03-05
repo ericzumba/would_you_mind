@@ -1,4 +1,7 @@
+require 'quebra_essa/bindable'
+
 class QuebraEssa::String
+  extend QuebraEssa::Bindable
 
   def self.csv_to_ary(string)
     string.split(",").map do |e|
@@ -10,13 +13,4 @@ class QuebraEssa::String
     end
   end
 
-  def self.bind(obj, method_name)
-    def obj.csv_to_ary(&block)
-      if block then
-        QuebraEssa::String.csv_to_ary(self) {|e| block.call e}
-      else
-        QuebraEssa::String.csv_to_ary(self) 
-      end
-    end
-  end
 end
