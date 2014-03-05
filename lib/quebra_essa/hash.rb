@@ -11,8 +11,11 @@ class QuebraEssa::Hash
   end
 
   def self.bind(obj, method_name)
-    def obj.reach(*path)
-      QuebraEssa::Hash.reach(self, *path) 
+    eigenclass = class<<obj; self end
+    eigenclass.class_eval do 
+      define_method(method_name) do |*path|
+        QuebraEssa::Hash.reach(self, *path) 
+      end
     end
   end
 
