@@ -1,4 +1,4 @@
-module QuebraEssa::Bindable
+module WouldYouMind::Bindable
 
   def bind(obj, method_name)
     context = self

@@ -1,8 +1,8 @@
 # todo: trocar o nome pra WouldYouMind
 require 'quebra_essa/bindable'
 
-class QuebraEssa::Hash
-  extend QuebraEssa::Bindable
+class WouldYouMind::Hash
+  extend WouldYouMind::Bindable
 
   def self.reach(hash, *path)
     result = nil

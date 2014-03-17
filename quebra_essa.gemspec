@@ -5,7 +5,7 @@ require 'quebra_essa/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "quebra_essa"
-  spec.version       = QuebraEssa::VERSION
+  spec.version       = WouldYouMind::VERSION
   spec.authors       = ["Eric Torti"]
   spec.email         = ["etorti@sp.r7.com"]
   spec.description   = %q{quebra}

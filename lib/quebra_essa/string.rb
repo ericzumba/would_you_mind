@@ -1,7 +1,7 @@
 require 'quebra_essa/bindable'
 
-class QuebraEssa::String
-  extend QuebraEssa::Bindable
+class WouldYouMind::String
+  extend WouldYouMind::Bindable
 
   def self.csv_to_ary(string)
     string.split(",").map do |e|

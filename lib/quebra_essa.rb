@@ -1,4 +1,4 @@
 require "quebra_essa/version"
 
-module QuebraEssa
+module WouldYouMind
 end
