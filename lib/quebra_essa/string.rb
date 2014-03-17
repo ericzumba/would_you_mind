@@ -1,4 +1,4 @@
-require 'quebra_essa/bindable'
+require 'would_you_mind/bindable'
 
 class WouldYouMind::String
   extend WouldYouMind::Bindable

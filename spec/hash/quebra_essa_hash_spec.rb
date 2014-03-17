@@ -1,4 +1,4 @@
-require 'quebra_essa/hash'
+require 'would_you_mind/hash'
 
 describe WouldYouMind::Hash do
   it "should exist" do

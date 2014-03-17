@@ -1,15 +1,15 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'quebra_essa/version'
+require 'would_you_mind/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "quebra_essa"
+  spec.name          = "would_you_mind"
   spec.version       = WouldYouMind::VERSION
   spec.authors       = ["Eric Torti"]
   spec.email         = ["etorti@sp.r7.com"]
-  spec.description   = %q{quebra}
-  spec.summary       = %q{essa}
+  spec.description   = %q{would you mind}
+  spec.summary       = %q{would you mind}
   spec.homepage      = ""
   spec.license       = "MIT"
 

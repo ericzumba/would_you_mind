@@ -1,5 +1,5 @@
 # todo: trocar o nome pra WouldYouMind
-require 'quebra_essa/bindable'
+require 'would_you_mind/bindable'
 
 class WouldYouMind::Hash
   extend WouldYouMind::Bindable

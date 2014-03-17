@@ -1,4 +1,4 @@
-require 'quebra_essa/string'
+require 'would_you_mind/string'
 
 describe WouldYouMind::String do
   it "should exist" do
